@@ -1,4 +1,3 @@
-// src/components/EventList.js
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
 import EventCard from './EventCard';
@@ -21,7 +20,6 @@ const EventList = () => {
   };
 
   const handleEdit = (event) => {
-    // Show edit form or navigate to edit page
   };
 
   return (

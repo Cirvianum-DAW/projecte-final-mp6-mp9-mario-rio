@@ -14,6 +14,7 @@ import UserManagementPage from './pages/UserManagementPage';
 import AboutPage from './pages/AboutPage';
 import PoliciesPage from './pages/PoliciesPage';
 import ContactPage from './pages/ContactPage';
+import SourcesPage from './pages/SourcesPage';
 import Footer from './components/Footer'; 
 import { AuthProvider } from './AuthContext';
 import './styles/tailwind.css';
@@ -41,6 +42,7 @@ const App = () => {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/policies" element={<PoliciesPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/sources" element={<SourcesPage />} />
             </Routes>
           </div>
           <Footer />

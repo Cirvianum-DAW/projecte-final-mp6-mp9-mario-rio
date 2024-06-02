@@ -1,4 +1,3 @@
-// src/pages/ProfilePage.js
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../AuthContext';

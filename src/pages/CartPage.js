@@ -1,4 +1,3 @@
-// src/pages/CartPage.js
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../AuthContext';
@@ -42,7 +41,6 @@ const CartPage = () => {
 
   const handleBuy = async () => {
     try {
-      // Empty the cart after purchase
       const promises = cartItems.map((item) =>
         axios.delete(`http://localhost:3001/orders/${item.id}`)
       );

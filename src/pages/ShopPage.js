@@ -1,4 +1,3 @@
-// src/pages/ShopPage.js
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../AuthContext';
@@ -73,11 +72,14 @@ const ShopPage = () => {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {products.map((product) => (
             <article key={product.id} className="bg-white p-4 rounded shadow-md flex flex-col">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-40 object-cover mb-4 rounded"
-              />
+              <div className="flex-grow mb-4">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover rounded"
+                  style={{ height: '200px', objectFit: 'cover' }}
+                />
+              </div>
               <h2 className="text-xl font-bold mb-2">{product.name}</h2>
               <p className="text-gray-600">Price: ${product.price}</p>
               <p className="text-gray-600">Stock: {product.stock}</p>
