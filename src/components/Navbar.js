@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
+import { AuthContext } from '../AuthContext';
 
-const Navbar = ({ user, onLogout }) => {
+const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [loggedInUser, setLoggedInUser] = useState(user);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
-    setLoggedInUser(storedUser);
-  }, [user]);
 
   return (
     <div>
@@ -43,10 +39,10 @@ const Navbar = ({ user, onLogout }) => {
             <Link to="/about" className="text-white">About</Link>
             <Link to="/policies" className="text-white">Policies</Link>
             <Link to="/contact" className="text-white">Contact</Link>
-            {loggedInUser ? (
+            {user ? (
               <>
-                <Link to="/profile" className="text-green-500">{loggedInUser.username}</Link>
-                <button onClick={onLogout} className="text-red-500">Logout</button>
+                <Link to="/profile" className="text-green-500">{user.username}</Link>
+                <button onClick={logout} className="text-red-500">Logout</button>
               </>
             ) : (
               <>
@@ -68,10 +64,10 @@ const Navbar = ({ user, onLogout }) => {
           <Link to="/about" className="text-white" onClick={toggleMenu}>About</Link>
           <Link to="/policies" className="text-white" onClick={toggleMenu}>Policies</Link>
           <Link to="/contact" className="text-white" onClick={toggleMenu}>Contact</Link>
-          {loggedInUser ? (
+          {user ? (
             <>
-              <Link to="/profile" className="text-green-500" onClick={toggleMenu}>{loggedInUser.username}</Link>
-              <button onClick={() => { onLogout(); toggleMenu(); }} className="text-red-500">Logout</button>
+              <Link to="/profile" className="text-green-500" onClick={toggleMenu}>{user.username}</Link>
+              <button onClick={() => { logout(); toggleMenu(); }} className="text-red-500">Logout</button>
             </>
           ) : (
             <>

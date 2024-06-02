@@ -34,7 +34,7 @@ const LoginPage = () => {
       localStorage.setItem('user', JSON.stringify(user));
       localStorage.setItem('hasLoggedIn', true);
       navigate('/');
-      window.location.reload(); // Force reload to ensure Navbar updates
+      window.location.reload();
     } catch (err) {
       setError('Login failed. Please try again.');
     }
