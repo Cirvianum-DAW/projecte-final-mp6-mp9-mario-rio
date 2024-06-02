@@ -20,7 +20,12 @@ const AddEditEventPage = () => {
       const fetchEvent = async () => {
         try {
           const response = await axios.get(`http://localhost:3001/events/${id}`);
-          setEventData(response.data);
+          const event = {
+            ...response.data,
+            id: parseInt(response.data.id, 10),
+            availableSlots: parseInt(response.data.availableSlots, 10),
+          };
+          setEventData(event);
           setIsEditMode(true);
         } catch (error) {
           console.error('Error fetching event:', error);
@@ -34,7 +39,7 @@ const AddEditEventPage = () => {
     const { name, value } = e.target;
     setEventData({
       ...eventData,
-      [name]: value,
+      [name]: name === 'availableSlots' ? parseInt(value, 10) : value,
     });
   };
 
@@ -44,7 +49,10 @@ const AddEditEventPage = () => {
       if (isEditMode) {
         await axios.put(`http://localhost:3001/events/${id}`, eventData);
       } else {
-        await axios.post('http://localhost:3001/events', eventData);
+        const response = await axios.get('http://localhost:3001/events');
+        const newId = response.data.length > 0 ? Math.max(...response.data.map(event => parseInt(event.id, 10))) + 1 : 1;
+        const newEvent = { ...eventData, id: newId };
+        await axios.post('http://localhost:3001/events', newEvent);
       }
       navigate('/events');
     } catch (error) {
