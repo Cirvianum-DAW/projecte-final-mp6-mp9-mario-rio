@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { AuthContext } from '../AuthContext';
@@ -39,6 +39,7 @@ const Navbar = () => {
             <Link to="/about" className="text-white">About</Link>
             <Link to="/policies" className="text-white">Policies</Link>
             <Link to="/contact" className="text-white">Contact</Link>
+            <Link to="/cart" className="text-white">Cart</Link>
             {user ? (
               <>
                 <Link to="/profile" className="text-green-500">{user.username}</Link>
@@ -64,6 +65,7 @@ const Navbar = () => {
           <Link to="/about" className="text-white" onClick={toggleMenu}>About</Link>
           <Link to="/policies" className="text-white" onClick={toggleMenu}>Policies</Link>
           <Link to="/contact" className="text-white" onClick={toggleMenu}>Contact</Link>
+          <Link to="/cart" className="text-white" onClick={toggleMenu}>Cart</Link>
           {user ? (
             <>
               <Link to="/profile" className="text-green-500" onClick={toggleMenu}>{user.username}</Link>
