@@ -1,0 +1,293 @@
+{
+  "uuid": "04b131d1-7747-4139-b03f-77a274858ff1",
+  "lastMigration": 32,
+  "name": "AirsoftAPI Mario",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "fc169dc1-c53f-47a8-b7fb-ab8af28212de",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "739ac1df-34a8-422a-a9dc-b7aa906961a3",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "2c00f491-f78a-40ae-b9d5-ef2ec45b30d9",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "events",
+      "responses": [
+        {
+          "uuid": "d1b6b699-bb61-4647-a8d4-25bf55c5917f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "a2bz",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "3e5d3229-92ec-415f-9c51-3fb717f2317c",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "users",
+      "responses": [
+        {
+          "uuid": "dc60df97-20fd-4b31-bf88-b9369f20287c",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "e36l",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "9f136673-9581-471f-ba59-fabe726d149e",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "products",
+      "responses": [
+        {
+          "uuid": "648eb14d-11f0-493e-8f12-309a9247e9a0",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "xggu",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "45bb207a-df27-4deb-a506-0486da2f4941",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "orders",
+      "responses": [
+        {
+          "uuid": "55aa81cb-f495-4461-954f-fd938749c724",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "at2k",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "863a6c71-7538-4fd9-b547-265699ed49cd",
+      "type": "crud",
+      "documentation": "",
+      "method": "",
+      "endpoint": "reservations",
+      "responses": [
+        {
+          "uuid": "890b441d-9e76-42e4-b213-642194031d42",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "q1by",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "fc169dc1-c53f-47a8-b7fb-ab8af28212de"
+    },
+    {
+      "type": "route",
+      "uuid": "3e5d3229-92ec-415f-9c51-3fb717f2317c"
+    },
+    {
+      "type": "route",
+      "uuid": "9f136673-9581-471f-ba59-fabe726d149e"
+    },
+    {
+      "type": "route",
+      "uuid": "2c00f491-f78a-40ae-b9d5-ef2ec45b30d9"
+    },
+    {
+      "type": "route",
+      "uuid": "45bb207a-df27-4deb-a506-0486da2f4941"
+    },
+    {
+      "type": "route",
+      "uuid": "863a6c71-7538-4fd9-b547-265699ed49cd"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [
+    {
+      "uuid": "1e7c9362-2b1f-447e-b14f-01fe4e9a6dba",
+      "id": "e36l",
+      "name": "users",
+      "documentation": "",
+      "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"firstName\": \"Mario\",\r\n    \"lastName\": \"Munteanu\",\r\n    \"username\": \"MarioAdmin\",\r\n    \"password\": \"Mario123\",\r\n    \"email\": \"mario.munteanu@cirvianum.cat\",\r\n    \"created_at\": \"2022-01-01T00:00:00.000Z\",\r\n    \"is_admin\": true,\r\n    \"orders\": [],\r\n    \"reservations\": []\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"firstName\": \"Guest\",\r\n    \"lastName\": \"Numberone\",\r\n    \"username\": \"guestno1\",\r\n    \"password\": \"guestno1\",\r\n    \"email\": \"admin1@example.com\",\r\n    \"created_at\": \"2022-01-01T00:00:00.000Z\",\r\n    \"is_admin\": false,\r\n    \"orders\": [1, 2],\r\n    \"reservations\": [1]\r\n  }\r\n]\r\n"
+    },
+    {
+      "uuid": "9545d99e-425e-402f-8793-bd83c7fa42f4",
+      "id": "xggu",
+      "name": "products",
+      "documentation": "",
+      "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Product 1\",\r\n    \"image\": \"http://example.com/product1.jpg\",\r\n    \"price\": 100.00,\r\n    \"stock\": 10\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Product 2\",\r\n    \"image\": \"http://example.com/product2.jpg\",\r\n    \"price\": 200.00,\r\n    \"stock\": 5\r\n  }\r\n]\r\n"
+    },
+    {
+      "uuid": "26886e8c-3e07-4937-a482-8a56e893fe05",
+      "id": "a2bz",
+      "name": "events",
+      "documentation": "",
+      "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Event 1\",\r\n    \"description\": \"This is event 1\",\r\n    \"image\": \"http://example.com/event1.jpg\",\r\n    \"date\": \"2022-02-01\",\r\n    \"available_slots\": 10,\r\n    \"reserved_slots\": [1]\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Event 2\",\r\n    \"description\": \"This is event 2\",\r\n    \"image\": \"http://example.com/event2.jpg\",\r\n    \"date\": \"2022-03-01\",\r\n    \"available_slots\": 5,\r\n    \"reserved_slots\": []\r\n  }\r\n]\r\n"
+    },
+    {
+      "uuid": "32841351-d0c2-42da-818c-79dd6c918b1d",
+      "id": "at2k",
+      "name": "orders",
+      "documentation": "",
+      "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"user_id\": 2,\r\n    \"product_id\": 1,\r\n    \"quantity\": 1,\r\n    \"total_price\": 100.00,\r\n    \"date\": \"2022-01-02\"\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"user_id\": 2,\r\n    \"product_id\": 2,\r\n    \"quantity\": 2,\r\n    \"total_price\": 400.00,\r\n    \"date\": \"2022-01-03\"\r\n  }\r\n]\r\n"
+    },
+    {
+      "uuid": "6362d36f-68ba-471b-8731-38ee737bc2c5",
+      "id": "q1by",
+      "name": "reservations",
+      "documentation": "",
+      "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"user_id\": 1,\r\n    \"event_id\": 1,\r\n    \"date\": \"2022-01-02\"\r\n  }\r\n]\r\n"
+    }
+  ],
+  "callbacks": []
+}
