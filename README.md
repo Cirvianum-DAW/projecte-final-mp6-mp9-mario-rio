@@ -1,8 +1,11 @@
-# AirsoftMunteanu Website Overview
-[Videoprojecte Mario]()
+# [AirsoftMunteanu Website Overview](https://pfinalmario.netlify.app/)
+
+# [Videoprojecte Mario](https://youtu.be/AW955eeXnPs)
+
+# [Usability](https://github.com/Cirvianum-DAW/projecte-final-mp6-mp9-mario-rio/blob/main/MP9%20-%20Act3.3%20Usability/Act3.3-Usability.md)
 
 ## Description
-The website is primarily based on ReactJS for managing the page. With a modular structure and essential functionalities, it offers users the options to participate in Airsoft activities, purchase equipment, and book appointments for different events or specific fields.
+The website is primarily based on ReactJS for managing the page, and Axios for fetching the API. With a modular structure and essential functionalities, it offers users the options to participate in Airsoft activities, purchase equipment, and book appointments for different events or specific fields.
 
 ## Features
 ### Login and Register:
