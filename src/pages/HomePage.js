@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Carousel from '../components/Carousel';
 import ContentSection from '../components/ContentSection';
-import Navbar from '../components/Navbar';
 import { Helmet } from 'react-helmet';
 
 const HomePage = () => {
@@ -33,7 +32,6 @@ const HomePage = () => {
       <Helmet>
         <title>AirsoftMunteanu | Home</title>
       </Helmet>
-      <Navbar user={loggedInUser} onLogout={onLogout} />
       {welcomeMessage && (
         <div className="bg-green-500 text-white text-center p-4 absolute w-full z-40 top-16">
           {welcomeMessage}

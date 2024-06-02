@@ -272,7 +272,7 @@
       "id": "a2bz",
       "name": "events",
       "documentation": "",
-      "value": "[\r\n  {\r\n    \"id\": 1,\r\n    \"name\": \"Event 1\",\r\n    \"description\": \"This is event 1\",\r\n    \"image\": \"http://example.com/event1.jpg\",\r\n    \"date\": \"2022-02-01\",\r\n    \"available_slots\": 10,\r\n    \"reserved_slots\": [1]\r\n  },\r\n  {\r\n    \"id\": 2,\r\n    \"name\": \"Event 2\",\r\n    \"description\": \"This is event 2\",\r\n    \"image\": \"http://example.com/event2.jpg\",\r\n    \"date\": \"2022-03-01\",\r\n    \"available_slots\": 5,\r\n    \"reserved_slots\": []\r\n  }\r\n]\r\n"
+      "value": "[\r\n  {\r\n    \"id\": \"1\",\r\n    \"name\": \"Event 1\",\r\n    \"description\": \"This is event 1\",\r\n    \"image\": \"http://via.placeholder.com/300\",\r\n    \"date\": \"2022-02-01T13:00:00Z\",\r\n    \"availableSlots\": 10,\r\n    \"reservedSlots\": [\"1\"]\r\n  },\r\n  {\r\n    \"id\": \"2\",\r\n    \"name\": \"Event 2\",\r\n    \"description\": \"This is event 2\",\r\n    \"image\": \"http://via.placeholder.com/300\",\r\n    \"date\": \"2022-03-01T15:00:00Z\",\r\n    \"availableSlots\": 5,\r\n    \"reservedSlots\": []\r\n  }\r\n]\r\n"
     },
     {
       "uuid": "32841351-d0c2-42da-818c-79dd6c918b1d",
