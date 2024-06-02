@@ -1,3 +1,4 @@
+// src/pages/ProfilePage.js
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../AuthContext';
@@ -31,7 +32,9 @@ const ProfilePage = () => {
 
     if (user) {
       fetchReservations();
-      fetchOrders();
+      if (!user.is_admin) {
+        fetchOrders();
+      }
     }
   }, [user]);
 
@@ -73,19 +76,21 @@ const ProfilePage = () => {
             Manage Users
           </button>
         )}
-        <section className="bg-white p-8 rounded shadow-md w-full max-w-md mt-8">
-          <h2 className="text-2xl font-bold mb-4">My Orders</h2>
-          <ul>
-            {orders.map((order) => (
-              <li key={order.id} className="mb-4">
-                <p><strong>Product ID:</strong> {order.product_id}</p>
-                <p><strong>Quantity:</strong> {order.quantity}</p>
-                <p><strong>Total Price:</strong> ${order.total_price}</p>
-                <p><strong>Date:</strong> {new Date(order.date).toLocaleDateString()}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
+        {!user?.is_admin && (
+          <section className="bg-white p-8 rounded shadow-md w-full max-w-md mt-8">
+            <h2 className="text-2xl font-bold mb-4">My Orders</h2>
+            <ul>
+              {orders.map((order) => (
+                <li key={order.id} className="mb-4">
+                  <p><strong>Product ID:</strong> {order.product_id}</p>
+                  <p><strong>Quantity:</strong> {order.quantity}</p>
+                  <p><strong>Total Price:</strong> ${order.total_price}</p>
+                  <p><strong>Date:</strong> {new Date(order.date).toLocaleDateString()}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     </div>
   );

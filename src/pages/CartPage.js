@@ -1,34 +1,57 @@
-import React, { useState, useEffect, useContext } from 'react';
+// src/pages/CartPage.js
+import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../AuthContext';
 import { Helmet } from 'react-helmet';
 
 const CartPage = () => {
-  const [cart, setCart] = useState([]);
   const { user } = useContext(AuthContext);
+  const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    const fetchCart = async () => {
+    const fetchCartItems = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/orders?user_id=${user.id}`);
-        setCart(response.data);
+        setCartItems(response.data);
+        calculateTotalPrice(response.data);
       } catch (error) {
-        console.error('Error fetching cart:', error);
+        console.error('Error fetching cart items:', error);
       }
     };
 
     if (user) {
-      fetchCart();
+      fetchCartItems();
     }
   }, [user]);
 
-  const handlePurchase = async () => {
+  const calculateTotalPrice = (items) => {
+    const total = items.reduce((acc, item) => acc + item.total_price, 0);
+    setTotalPrice(total);
+  };
+
+  const handleRemoveFromCart = async (orderId) => {
     try {
-      // Add logic to handle purchase, for now, we will just clear the cart
-      setCart([]);
-      alert('Purchase successful');
+      await axios.delete(`http://localhost:3001/orders/${orderId}`);
+      setCartItems(cartItems.filter((item) => item.id !== orderId));
+      calculateTotalPrice(cartItems.filter((item) => item.id !== orderId));
     } catch (error) {
-      console.error('Error completing purchase:', error);
+      console.error('Error removing item from cart:', error);
+    }
+  };
+
+  const handleBuy = async () => {
+    try {
+      // Empty the cart after purchase
+      const promises = cartItems.map((item) =>
+        axios.delete(`http://localhost:3001/orders/${item.id}`)
+      );
+      await Promise.all(promises);
+      setCartItems([]);
+      setTotalPrice(0);
+      alert('Purchase successful!');
+    } catch (error) {
+      console.error('Error processing purchase:', error);
     }
   };
 
@@ -38,24 +61,32 @@ const CartPage = () => {
         <title>Cart | AirsoftMunteanu</title>
       </Helmet>
       <div className="container mx-auto mt-20 flex flex-col items-center flex-grow">
-        <h1 className="text-3xl font-bold mb-8">Cart</h1>
         <section className="bg-white p-8 rounded shadow-md w-full max-w-md">
-          <h2 className="text-2xl font-bold mb-4">My Cart</h2>
+          <h2 className="text-2xl font-bold mb-4">Shopping Cart</h2>
           <ul>
-            {cart.map((item) => (
+            {cartItems.map((item) => (
               <li key={item.id} className="mb-4">
                 <p><strong>Product ID:</strong> {item.product_id}</p>
                 <p><strong>Quantity:</strong> {item.quantity}</p>
                 <p><strong>Total Price:</strong> ${item.total_price}</p>
-                <p><strong>Date:</strong> {new Date(item.date).toLocaleDateString()}</p>
+                <button
+                  className="bg-red-500 text-white px-4 py-2 rounded mt-2"
+                  onClick={() => handleRemoveFromCart(item.id)}
+                >
+                  Remove
+                </button>
               </li>
             ))}
           </ul>
-          {cart.length > 0 && (
-            <button className="bg-green-500 text-white p-2 rounded mt-4" onClick={handlePurchase}>
-              Purchase
+          <div className="mt-4">
+            <p><strong>Total Price:</strong> ${totalPrice}</p>
+            <button
+              className="bg-blue-500 text-white px-6 py-3 rounded-full mt-4"
+              onClick={handleBuy}
+            >
+              Buy Now
             </button>
-          )}
+          </div>
         </section>
       </div>
     </div>

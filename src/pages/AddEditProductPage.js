@@ -1,3 +1,4 @@
+// src/pages/AddEditProductPage.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -9,7 +10,7 @@ const AddEditProductPage = () => {
     name: '',
     image: '',
     price: '',
-    stock: '',
+    stock: ''
   });
   const [isEditMode, setIsEditMode] = useState(false);
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const AddEditProductPage = () => {
     const { name, value } = e.target;
     setProductData({
       ...productData,
-      [name]: value,
+      [name]: value
     });
   };
 
@@ -48,6 +49,7 @@ const AddEditProductPage = () => {
       navigate('/shop');
     } catch (error) {
       console.error('Error saving product:', error);
+      alert('Error saving product.');
     }
   };
 
@@ -61,7 +63,9 @@ const AddEditProductPage = () => {
           <h2 className="text-2xl font-bold mb-4">{isEditMode ? 'Edit Product' : 'Add Product'}</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-gray-600">Product Name:</label>
+              <label htmlFor="name" className="block text-gray-600">
+                Product Name:
+              </label>
               <input
                 type="text"
                 id="name"
@@ -73,7 +77,9 @@ const AddEditProductPage = () => {
               />
             </div>
             <div>
-              <label htmlFor="image" className="block text-gray-600">Image URL:</label>
+              <label htmlFor="image" className="block text-gray-600">
+                Image URL:
+              </label>
               <input
                 type="text"
                 id="image"
@@ -85,7 +91,9 @@ const AddEditProductPage = () => {
               />
             </div>
             <div>
-              <label htmlFor="price" className="block text-gray-600">Price:</label>
+              <label htmlFor="price" className="block text-gray-600">
+                Price:
+              </label>
               <input
                 type="number"
                 id="price"
@@ -97,7 +105,9 @@ const AddEditProductPage = () => {
               />
             </div>
             <div>
-              <label htmlFor="stock" className="block text-gray-600">Stock:</label>
+              <label htmlFor="stock" className="block text-gray-600">
+                Stock:
+              </label>
               <input
                 type="number"
                 id="stock"
