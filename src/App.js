@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -10,11 +10,12 @@ import PoliciesPage from './pages/PoliciesPage';
 import ContactPage from './pages/ContactPage';
 import ProfilePage from './pages/ProfilePage';
 import AddEditEventPage from './pages/AddEditEventPage';
+import UserManagementPage from './pages/UserManagementPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { AuthProvider } from './AuthContext';
 
-const App = () => {
+function App() {
   return (
     <AuthProvider>
       <Router>
@@ -33,6 +34,7 @@ const App = () => {
               <Route path="/policies" element={<PoliciesPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/manage-users" element={<UserManagementPage />} />
             </Routes>
           </main>
           <Footer />
@@ -40,6 +42,6 @@ const App = () => {
       </Router>
     </AuthProvider>
   );
-};
+}
 
 export default App;
