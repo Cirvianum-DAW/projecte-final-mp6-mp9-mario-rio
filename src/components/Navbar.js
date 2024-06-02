@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center">
               <h1 className="text-white text-lg font-bold">AirsoftMunteanu</h1>
               <img
-                src="https://via.placeholder.com/32"
+                src="https://optimario.netlify.app/Mario-Logo.bfba45f8.svg"
                 alt="Logo"
                 className="w-8 h-8 ml-2 transition-transform transform hover:scale-110 hover:rotate-12"
               />

@@ -99,7 +99,7 @@ const UserManagementPage = () => {
   return (
     <div className="container mx-auto mt-20">
       <Helmet>
-        <title>User Management | AirsoftMunteanu</title>
+        <title>AirsoftMunteanu | User Management</title>
       </Helmet>
       <h2 className="text-2xl font-bold mb-4">User Management</h2>
       <div className="mb-4">

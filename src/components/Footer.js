@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-wrap justify-center items-center">
         <div className="footer-section mb-4 mx-4">
           <img
-            src="images/pin.svg"
+            src="https://optimario.netlify.app/pin.84bb889e.svg"
             alt="Location Logo"
             className="w-8 h-8 mb-2 mx-auto"
           />
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="footer-section mb-4 mx-4">
           <img
-            src="images/telephone.svg"
+            src="https://optimario.netlify.app/telephone.e6378c1e.svg"
             alt="Phone Logo"
             className="w-8 h-8 mb-2 mx-auto"
           />
@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
         <div className="footer-section mb-4 mx-4">
           <img
-            src="images/email.svg"
+            src="https://optimario.netlify.app/email.4b784215.svg"
             alt="Contact Logo"
             className="w-8 h-8 mb-2 mx-auto"
           />

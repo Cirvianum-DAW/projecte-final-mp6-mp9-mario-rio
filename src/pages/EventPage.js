@@ -123,7 +123,7 @@ const EventPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
-        <title>AirsoftMunteanu | Events</title>
+        <title>Events | AirsoftMunteanu</title>
       </Helmet>
       <div className="container mx-auto mt-8 flex flex-col items-center flex-grow">
         <h1 className="text-3xl font-bold mb-8">Events</h1>

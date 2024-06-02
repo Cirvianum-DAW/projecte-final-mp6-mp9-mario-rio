@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <main className="container mx-auto mt-8 flex-1">
       <Helmet>
-        <title>AirsoftMunteanu | Contact</title>
+        <title>Contact | AirsoftMunteanu</title>
       </Helmet>
       <section className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-2/3">
@@ -63,15 +63,27 @@ const ContactPage = () => {
       <section className="flex flex-col items-center mt-8">
         <h2 className="text-2xl font-bold mb-4">Connect with Us</h2>
         <div className="flex space-x-4">
-          <div className="w-8 h-8 bg-gray-300 flex items-center justify-center">
-            <span>FB</span>
-          </div>
-          <div className="w-8 h-8 bg-gray-300 flex items-center justify-center">
-            <span>TW</span>
-          </div>
-          <div className="w-8 h-8 bg-gray-300 flex items-center justify-center">
-            <span>IG</span>
-          </div>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/?size=100&id=yGcWL8copNNQ&format=png&color=000000"
+              alt="Facebook"
+              className="w-8 h-8"
+            />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000"
+              alt="Twitter"
+              className="w-8 h-8"
+            />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://img.icons8.com/?size=100&id=xWVjuc9hryql&format=png&color=000000"
+              alt="Instagram"
+              className="w-8 h-8"
+            />
+          </a>
         </div>
       </section>
     </main>

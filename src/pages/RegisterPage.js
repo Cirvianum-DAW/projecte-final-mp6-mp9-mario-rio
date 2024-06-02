@@ -7,7 +7,7 @@ const RegisterPage = () => {
   return (
     <div className="container mx-auto mt-8 flex-1 flex justify-center items-center">
         <Helmet>
-            <title>AirsoftMunteanu | Register</title>
+            <title>Register | AirsoftMunteanu</title>
         </Helmet>
         <RegisterForm />
     </div>

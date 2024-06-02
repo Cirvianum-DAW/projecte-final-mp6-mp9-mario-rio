@@ -11,7 +11,7 @@ const PoliciesPage = () => {
   return (
     <div className="container mx-auto mt-8 flex-1">
       <Helmet>
-        <title>AirsoftMunteanu | Policies</title>
+        <title>Policies | AirsoftMunteanu</title>
       </Helmet>
       <h1 className="text-3xl font-bold mb-8">Policies</h1>
 

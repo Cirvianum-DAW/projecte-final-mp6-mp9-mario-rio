@@ -43,7 +43,7 @@ const LoginPage = () => {
   return (
     <div className="container mx-auto mt-16 flex justify-center items-center py-8">
       <Helmet>
-        <title>AirsoftMunteanu | Login</title>
+        <title>Login | AirsoftMunteanu</title>
       </Helmet>
       <section className="bg-white p-8 rounded shadow-md w-full max-w-md">
         <h2 className="text-2xl font-bold mb-4">Login</h2>

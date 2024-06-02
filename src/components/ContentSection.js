@@ -20,7 +20,7 @@ const ContentSection = () => {
             <Link to="/events" className="block w-full h-full">
               <div className="w-full h-64 overflow-hidden rounded-lg mb-2 relative transition duration-300 ease-in-out transform hover:scale-105">
                 <img
-                  src="https://via.placeholder.com/400x400"
+                  src="https://backiee.com/static/wallpapers/1000x563/382040.jpg"
                   alt="Events Image"
                   className="w-full h-full object-cover"
                 />
@@ -34,7 +34,7 @@ const ContentSection = () => {
             <Link to="/shop" className="block w-full h-full">
               <div className="w-full h-64 overflow-hidden rounded-lg mb-2 relative transition duration-300 ease-in-out transform hover:scale-105">
                 <img
-                  src="https://via.placeholder.com/400x400"
+                  src="https://backiee.com/static/wallpapers/1000x563/159194.jpg"
                   alt="Shop Image"
                   className="w-full h-full object-cover"
                 />
@@ -48,7 +48,7 @@ const ContentSection = () => {
             <Link to="/policies" className="block w-full h-full">
               <div className="w-full h-64 overflow-hidden rounded-lg mb-2 relative transition duration-300 ease-in-out transform hover:scale-105">
                 <img
-                  src="https://via.placeholder.com/400x400"
+                  src="https://www.justbbguns.co.uk/wp-content/uploads/2022/11/Perfect-Airsoft-Stocking-Fillers-and-Christmas-Gifts.jpg"
                   alt="Policies Image"
                   className="w-full h-full object-cover"
                 />
@@ -62,7 +62,7 @@ const ContentSection = () => {
             <Link to="/contact" className="block w-full h-full">
               <div className="w-full h-64 overflow-hidden rounded-lg mb-2 relative transition duration-300 ease-in-out transform hover:scale-105">
                 <img
-                  src="https://via.placeholder.com/400x400"
+                  src="https://wallpapercave.com/wp/wp3491758.jpg"
                   alt="Contact Image"
                   className="w-full h-full object-cover"
                   style={{ objectPosition: 'top' }}

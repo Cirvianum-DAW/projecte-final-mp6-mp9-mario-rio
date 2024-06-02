@@ -30,7 +30,7 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        <title>AirsoftMunteanu | Home</title>
+        <title>Home | AirsoftMunteanu</title>
       </Helmet>
       {welcomeMessage && (
         <div className="bg-green-500 text-white text-center p-4 absolute w-full z-40 top-16">

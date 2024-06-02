@@ -1,56 +1,43 @@
 import React, { useEffect } from 'react';
-import Swiper from 'swiper';
+import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 
-const Carousel = () => {
-  useEffect(() => {
-    new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: '.custom-swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 5000,
-      },
-      navigation: {
-        nextEl: '[data-carousel-next]',
-        prevEl: '[data-carousel-prev]',
-      },
-    });
-  }, []);
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 
+const Carousel = () => {
   return (
-    <div id="default-carousel" className="relative w-full h-screen overflow-hidden">
-      <div id="swiperContainer" className="relative swiper-container h-full">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">
-            <img
-              src="https://via.placeholder.com/1920x1080"
-              className="w-full h-full object-cover object-center"
-              alt="Placeholder Image 1"
-            />
-          </div>
-          <div className="swiper-slide">
-            <img
-              src="https://via.placeholder.com/1920x1080"
-              className="w-full h-full object-cover object-center"
-              alt="Placeholder Image 2"
-            />
-          </div>
-          <div className="swiper-slide">
-            <img
-              src="https://via.placeholder.com/1920x1080"
-              className="w-full h-full object-cover object-center"
-              alt="Placeholder Image 3"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-50 flex space-x-2">
-        <div className="custom-swiper-pagination"></div>
-      </div>
+    <div className="relative w-full h-screen overflow-hidden">
+      <Swiper
+        spaceBetween={10}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        className="h-full"
+      >
+        <SwiperSlide>
+          <img
+            src="https://backiee.com/static/wallpapers/1000x563/159194.jpg"
+            className="w-full h-full object-cover object-center"
+            alt="Placeholder Image 1"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://backiee.com/static/wallpapers/1000x563/172449.jpg"
+            className="w-full h-full object-cover object-center"
+            alt="Placeholder Image 2"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://backiee.com/static/wallpapers/1000x563/382040.jpg"
+            className="w-full h-full object-cover object-center"
+            alt="Placeholder Image 3"
+          />
+        </SwiperSlide>
+      </Swiper>
       <button
         id="scrollDownBtn"
         type="button"

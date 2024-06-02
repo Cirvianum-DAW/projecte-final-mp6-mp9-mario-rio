@@ -3,10 +3,10 @@ import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   return (
-      <main className="container mx-auto mt-8 flex-1">
-        <Helmet>
-        <title>AirsoftMunteanu | About Us</title>
-        </Helmet>
+    <main className="container mx-auto mt-8 flex-1">
+      <Helmet>
+        <title>About Us | AirsoftMunteanu</title>
+      </Helmet>
       <h1 className="text-3xl font-bold mb-8">About Us</h1>
       <section className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-2/3">
@@ -33,16 +33,28 @@ const AboutPage = () => {
         </div>
 
         <aside className="lg:w-1/3">
-          <div className="w-full h-48 bg-gray-300 mb-4 flex items-center justify-center">
-            <span>Image Placeholder 1</span>
+          <div className="w-full h-48 mb-4 flex items-center justify-center">
+            <img
+              src="https://www.justbbguns.co.uk/wp-content/uploads/2022/11/Perfect-Airsoft-Stocking-Fillers-and-Christmas-Gifts.jpg"
+              alt="Our Story"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          <div className="w-full h-48 bg-gray-300 mb-4 flex items-center justify-center">
-            <span>Image Placeholder 2</span>
+          <div className="w-full h-48 mb-4 flex items-center justify-center">
+            <img
+              src="https://wallpapercave.com/wp/wp3491756.jpg"
+              alt="Our Mission"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          <div className="w-full h-48 bg-gray-300 mb-4 flex items-center justify-center">
-            <span>Image Placeholder 3</span>
+          <div className="w-full h-48 mb-4 flex items-center justify-center">
+            <img
+              src="https://wallpapercave.com/wp/wp3491758.jpg"
+              alt="Our Vision"
+              className="w-full h-full object-cover"
+            />
           </div>
         </aside>
       </section>
